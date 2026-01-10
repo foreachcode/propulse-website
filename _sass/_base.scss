@@ -114,6 +114,7 @@ img {
   box-shadow: $shadow-md, 0 0 20px rgba(168, 85, 247, 0.3);
 
   &:hover {
+    color: $white;
     transform: translateY(-2px);
     box-shadow: $shadow-lg, 0 0 30px rgba(168, 85, 247, 0.4);
   }
@@ -126,6 +127,7 @@ img {
   backdrop-filter: blur(10px);
 
   &:hover {
+    color: $white;
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.5);
   }
