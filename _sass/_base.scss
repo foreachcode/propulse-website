@@ -1,0 +1,240 @@
+// Base styles
+@import 'variables';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $text-base;
+  line-height: 1.6;
+  color: $gray-800;
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $gray-900;
+}
+
+h1 { font-size: $text-5xl; }
+h2 { font-size: $text-4xl; }
+h3 { font-size: $text-3xl; }
+h4 { font-size: $text-2xl; }
+h5 { font-size: $text-xl; }
+h6 { font-size: $text-lg; }
+
+p {
+  margin-bottom: $spacing-4;
+  color: $gray-600;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $primary-light;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 $spacing-6;
+
+  @media (min-width: $breakpoint-lg) {
+    padding: 0 $spacing-8;
+  }
+}
+
+// Section spacing
+.section {
+  padding: $spacing-16 0;
+
+  @media (min-width: $breakpoint-lg) {
+    padding: $spacing-24 0;
+  }
+}
+
+// Gradient text
+.gradient-text {
+  background: $gradient-accent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Buttons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-2;
+  padding: $spacing-3 $spacing-6;
+  font-family: $font-primary;
+  font-size: $text-base;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: $radius-lg;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary {
+  background: $gradient-cta;
+  color: $white;
+  box-shadow: $shadow-md, 0 0 20px rgba(168, 85, 247, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg, 0 0 30px rgba(168, 85, 247, 0.4);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: $white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $primary;
+  border: 2px solid $primary;
+
+  &:hover {
+    background: $primary;
+    color: $white;
+  }
+}
+
+.btn-lg {
+  padding: $spacing-4 $spacing-8;
+  font-size: $text-lg;
+  border-radius: $radius-xl;
+}
+
+// Cards
+.card {
+  background: $white;
+  border-radius: $radius-xl;
+  padding: $spacing-6;
+  box-shadow: $shadow-md;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: $radius-xl;
+  padding: $spacing-6;
+}
+
+// Utility classes
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-4 { margin-bottom: $spacing-4; }
+.mb-6 { margin-bottom: $spacing-6; }
+.mb-8 { margin-bottom: $spacing-8; }
+.mb-12 { margin-bottom: $spacing-12; }
+
+.mt-4 { margin-top: $spacing-4; }
+.mt-6 { margin-top: $spacing-6; }
+.mt-8 { margin-top: $spacing-8; }
+
+// Grid
+.grid {
+  display: grid;
+  gap: $spacing-6;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-3 {
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-4 {
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Flex
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gap-4 { gap: $spacing-4; }
+.gap-6 { gap: $spacing-6; }
+.gap-8 { gap: $spacing-8; }

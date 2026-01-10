@@ -1,0 +1,27 @@
+- title: Fiche dédiée par membre
+  description: Enregistrement des données personnelles, compétences et intérêts pour mieux connaître chaque adhérent
+  icon: user-card
+
+- title: Organisation des réunions
+  description: Gestion simplifiée des réunions avec planification et rappels pour assurer la participation
+  icon: calendar
+
+- title: Suivi du chiffre d'affaires
+  description: Comptabilisation des échanges commerciaux entre membres pour évaluer la performance du groupe
+  icon: chart
+
+- title: Paiement et suivi des adhésions
+  description: Système intégré pour gérer les paiements, renouvellements et relances des adhérents
+  icon: credit-card
+
+- title: Trombinoscope des membres
+  description: Répertoire interactif avec profils, coordonnées et informations clés de tous les membres
+  icon: users
+
+- title: Rédaction des comptes rendus
+  description: Création de rapports professionnels partagés avec transparence auprès des membres
+  icon: document
+
+- title: Organisation d'événements
+  description: Calendrier intégré permettant la planification et l'inscription des participants
+  icon: event

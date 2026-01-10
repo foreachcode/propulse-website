@@ -1,0 +1,175 @@
+---
+layout: default
+title: Propulse
+description: Le logiciel de gestion de réseaux d'affaires - Optimisez la gestion de votre club business ou association
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-float float-1"></div>
+  <div class="hero-float float-2"></div>
+  <div class="hero-float float-3"></div>
+
+  <div class="container">
+    <div class="hero-content fade-in">
+      <span class="hero-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+        Nouvelle version disponible
+      </span>
+
+      <h1 class="hero-title">
+        Optimisez la gestion de votre
+        <span class="highlight">club business</span>
+        ou association
+      </h1>
+
+      <p class="hero-subtitle">
+        Le logiciel de gestion de réseaux d'affaires conçu par des entrepreneurs, pour des entrepreneurs. Simplifiez vos réunions, suivez vos performances et développez votre réseau.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#demo" class="btn btn-primary btn-lg">
+          Démo gratuite
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#features" class="btn btn-secondary btn-lg">
+          Découvrir les fonctionnalités
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clients Section - À activer quand les données seront disponibles
+<section class="clients-section">
+  <div class="container">
+    <p class="clients-title">Ils nous font confiance</p>
+    <div class="clients-logos">
+      <img src="{{ '/assets/partners/logo-forbes.svg' | relative_url }}" alt="Forbes" />
+      <img src="{{ '/assets/partners/logo-techcrunch.svg' | relative_url }}" alt="TechCrunch" />
+      <img src="{{ '/assets/partners/logo-bni.svg' | relative_url }}" alt="BNI" />
+      <img src="{{ '/assets/partners/logo-cnn.svg' | relative_url }}" alt="CNN" />
+      <img src="{{ '/assets/partners/logo-maddyness.svg' | relative_url }}" alt="Maddyness" />
+    </div>
+  </div>
+</section>
+-->
+
+<!-- Features Section -->
+<section class="features-section section" id="features">
+  <div class="container">
+    <div class="features-header fade-in">
+      <h2 class="features-title">
+        Tout ce dont vous avez besoin pour
+        <span class="highlight">gérer votre réseau</span>
+      </h2>
+      <p class="features-subtitle">
+        Des outils puissants et intuitifs pour optimiser la gestion de votre club business et maximiser les opportunités de networking.
+      </p>
+    </div>
+
+    <div class="grid grid-3">
+      {% for feature in site.data.features %}
+      <div class="feature-card fade-in fade-in-delay-{{ forloop.index }}">
+        <div class="feature-icon">
+          {% include icons.html name=feature.icon %}
+        </div>
+        <h3 class="feature-title">{{ feature.title }}</h3>
+        <p class="feature-description">{{ feature.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Screenshot Section -->
+<section class="section" style="background: linear-gradient(180deg, #fff 0%, #f9fafb 100%);">
+  <div class="container">
+    <div class="text-center mb-12 fade-in">
+      <h2>Une interface <span class="gradient-text">intuitive et moderne</span></h2>
+      <p style="max-width: 600px; margin: 1rem auto; color: #6b7280;">
+        Conçue pour vous faire gagner du temps et vous concentrer sur l'essentiel : développer votre réseau.
+      </p>
+    </div>
+    <!-- Image à ajouter ultérieurement -->
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section section" id="team">
+  <div class="container">
+    <div class="team-header fade-in">
+      <h2 class="team-title">Créé par des entrepreneurs, pour des entrepreneurs</h2>
+      <p class="team-subtitle">
+        Une équipe passionnée basée à Rouen, experte de l'univers du web et du networking professionnel.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      {% for member in site.data.team %}
+      <div class="team-member fade-in fade-in-delay-{{ forloop.index }}">
+        <div class="team-avatar">
+          <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" />
+        </div>
+        <h4 class="team-name">{{ member.name }}</h4>
+        <p class="team-role">{{ member.role }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section section" id="faq">
+  <div class="container">
+    <div class="faq-header fade-in">
+      <h2>Questions <span class="gradient-text">fréquentes</span></h2>
+      <p style="color: #6b7280; font-size: 1.125rem;">
+        Tout ce que vous devez savoir pour bien démarrer avec Propulse.
+      </p>
+    </div>
+
+    <div class="faq-list">
+      {% for item in site.data.faq %}
+      <div class="faq-item fade-in">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          {{ item.question }}
+          {% include icons.html name='chevron-down' %}
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            {{ item.answer }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section" id="demo">
+  <div class="container">
+    <div class="cta-content fade-in">
+      <h2 class="cta-title">Prêt à propulser votre réseau ?</h2>
+      <p class="cta-subtitle">
+        Rejoignez les centaines de clubs et associations qui font confiance à Propulse pour gérer leur réseau professionnel.
+      </p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/propulse" class="btn btn-primary btn-lg" target="_blank">
+          Réserver une démo gratuite
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="https://app.propulse.business/register" class="btn btn-secondary btn-lg">
+          Créer mon club gratuitement
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

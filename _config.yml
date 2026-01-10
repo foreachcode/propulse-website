@@ -1,0 +1,31 @@
+# Propulse Website Configuration
+title: Propulse
+description: Le logiciel de gestion de réseaux d'affaires - Optimisez la gestion de votre club business ou association
+url: "https://www.propulse.business"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Collections
+collections:
+  features:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
