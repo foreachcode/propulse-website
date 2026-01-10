@@ -1,0 +1,12 @@
+# Robots.txt pour Propulse.business
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.propulse.business/sitemap.xml
+
+# Interdire l'accès aux ressources internes
+Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
