@@ -132,7 +132,7 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 100vh;
     left: 0;
     right: 0;
     height: 200px;
