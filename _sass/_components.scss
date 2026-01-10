@@ -558,7 +558,87 @@
   line-height: 1.7;
 }
 
-// CTA Section
+// Screenshot Section (Dark)
+.screenshot-section {
+  background: $gradient-hero;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $gradient-mesh;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+// Pricing Section (Light)
+.pricing-section {
+  background: linear-gradient(180deg, $white 0%, $gray-100 100%);
+  position: relative;
+}
+
+.pricing-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pricing-title {
+  color: $gray-900;
+  margin-bottom: $spacing-4;
+}
+
+.pricing-subtitle {
+  color: $gray-600;
+  font-size: $text-lg;
+  margin-bottom: $spacing-8;
+}
+
+.pricing-box {
+  margin-bottom: $spacing-8;
+}
+
+.pricing-amount {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: $primary;
+  line-height: 1;
+}
+
+.pricing-period {
+  font-size: $text-xl;
+  color: $gray-600;
+  margin-left: $spacing-2;
+}
+
+.pricing-details {
+  color: $gray-500;
+  font-size: $text-base;
+  margin-top: $spacing-2;
+}
+
+.pricing-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+  justify-content: center;
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+  }
+}
+
+// CTA Section (kept for other pages)
 .cta-section {
   background: $gradient-hero;
   position: relative;
