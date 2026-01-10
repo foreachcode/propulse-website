@@ -9,7 +9,7 @@ main:
   - label: "Blog"
     url: "/blog"
   - label: "Contact"
-    url: "https://calendly.com/propulse"
+    url: "/contact"
 
 # Boutons CTA header
 cta:
@@ -17,7 +17,7 @@ cta:
     url: "https://app.propulse.business"
     class: "btn btn-secondary"
   - label: "Demo gratuite"
-    url: "https://calendly.com/propulse"
+    url: "/contact"
     class: "btn btn-primary"
 
 # Footer - Produit
@@ -27,7 +27,7 @@ footer_product:
     - label: "Fonctionnalites"
       url: "/#features"
     - label: "Demo gratuite"
-      url: "https://calendly.com/propulse"
+      url: "/contact"
     - label: "Connexion"
       url: "https://app.propulse.business"
 
@@ -42,7 +42,7 @@ footer_resources:
     - label: "Notre equipe"
       url: "/#team"
     - label: "Contact"
-      url: "https://calendly.com/propulse"
+      url: "/contact"
 
 # Footer - Legal
 footer_legal:
@@ -56,7 +56,7 @@ footer_legal:
 # Footer - Contact
 footer_contact:
   title: "Contact"
-  calendly: "https://calendly.com/propulse"
+  calendly: "/contact"
   calendly_label: "Prendre rendez-vous"
   location: "Rouen, France"
 
