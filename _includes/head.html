@@ -48,4 +48,8 @@
 {{ page.schema }}
 {% elsif page.layout == 'article' %}
 {% include schema-article.html %}
+{% elsif page.url contains '/blog/' and page.url != '/blog/' %}
+{% include schema-article.html %}
+{% elsif page.url == '/' or page.url == '/index.html' %}
+{% include schema-organization.html %}
 {% endif %}
