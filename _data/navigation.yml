@@ -1,0 +1,60 @@
+# Navigation principale
+main:
+  - label: "Fonctionnalites"
+    url: "/#features"
+  - label: "FAQ"
+    url: "/#faq"
+  - label: "Equipe"
+    url: "/#team"
+  - label: "Blog"
+    url: "/blog"
+  - label: "Contact"
+    url: "mailto:contact@propulse.business"
+
+# Boutons CTA header
+cta:
+  - label: "Connexion"
+    url: "https://app.propulse.business"
+    class: "btn btn-secondary"
+  - label: "Demo gratuite"
+    url: "/#demo"
+    class: "btn btn-primary"
+
+# Footer - Produit
+footer_product:
+  title: "Produit"
+  links:
+    - label: "Fonctionnalites"
+      url: "/#features"
+    - label: "Demo gratuite"
+      url: "/#demo"
+    - label: "Connexion"
+      url: "https://app.propulse.business"
+
+# Footer - Ressources
+footer_resources:
+  title: "Ressources"
+  links:
+    - label: "Blog"
+      url: "/blog"
+    - label: "FAQ"
+      url: "/#faq"
+    - label: "Notre equipe"
+      url: "/#team"
+    - label: "Contact"
+      url: "mailto:contact@propulse.business"
+
+# Footer - Legal
+footer_legal:
+  title: "Legal"
+  links:
+    - label: "Mentions legales"
+      url: "/mentions-legales"
+    - label: "Confidentialite"
+      url: "/politique-confidentialite"
+
+# Reseaux sociaux
+social:
+  - platform: "LinkedIn"
+    url: "https://www.linkedin.com/company/propulsebusiness/"
+    icon: "linkedin"

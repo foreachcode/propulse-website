@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ page.description | default: site.description }}">
+<title>{{ page.title | default: site.title }}</title>
+
+{% if page.canonical %}
+<!-- SEO -->
+<link rel="canonical" href="{{ page.canonical }}">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Propulse">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ page.canonical }}">
+<meta property="og:site_name" content="Propulse">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="{{ page.og_image | default: 'https://www.propulse.business/assets/images/og-image.png' }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="{{ page.og_image | default: 'https://www.propulse.business/assets/images/og-image.png' }}">
+{% endif %}
+
+<!-- Preload critical fonts -->
+<link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_KU7NShXUEKi4Rw.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/css/main.css?v=1.0">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/logos/logo-propulse.svg">
+<link rel="apple-touch-icon" href="/assets/logos/apple-touch-icon.png">
+
+<!-- Schema.org Structured Data -->
+{% if page.schema %}
+{{ page.schema }}
+{% elsif page.layout == 'article' %}
+{% include schema-article.html %}
+{% endif %}

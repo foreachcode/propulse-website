@@ -1,0 +1,28 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Propulse",
+    "url": "https://www.propulse.business"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Propulse",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.propulse.business/assets/logos/logo-propulse.svg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.canonical }}"
+  },
+  "image": "{{ page.og_image | default: 'https://www.propulse.business/assets/images/og-image.png' }}",
+  "datePublished": "{{ page.date_published | default: '2024-01-15' }}",
+  "dateModified": "{{ page.date_modified | default: page.date_published | default: '2024-01-15' }}"
+}
+</script>

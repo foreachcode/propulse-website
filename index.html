@@ -99,30 +99,6 @@ description: Le logiciel de gestion de réseaux d'affaires - Optimisez la gestio
   </div>
 </section>
 
-<!-- Team Section -->
-<section class="team-section section" id="team">
-  <div class="container">
-    <div class="team-header fade-in">
-      <h2 class="team-title">Créé par des entrepreneurs, pour des entrepreneurs</h2>
-      <p class="team-subtitle">
-        Une équipe passionnée basée à Rouen, experte de l'univers du web et du networking professionnel.
-      </p>
-    </div>
-
-    <div class="team-grid">
-      {% for member in site.data.team %}
-      <div class="team-member fade-in fade-in-delay-{{ forloop.index }}">
-        <div class="team-avatar">
-          <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" />
-        </div>
-        <h4 class="team-name">{{ member.name }}</h4>
-        <p class="team-role">{{ member.role }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- FAQ Section -->
 <section class="faq-section section" id="faq">
   <div class="container">
@@ -145,6 +121,30 @@ description: Le logiciel de gestion de réseaux d'affaires - Optimisez la gestio
             {{ item.answer }}
           </div>
         </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section section" id="team">
+  <div class="container">
+    <div class="team-header fade-in">
+      <h2 class="team-title">Créé par des entrepreneurs, pour des entrepreneurs</h2>
+      <p class="team-subtitle">
+        Une équipe passionnée basée à Rouen, experte de l'univers du web et du networking professionnel.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      {% for member in site.data.team %}
+      <div class="team-member fade-in fade-in-delay-{{ forloop.index }}">
+        <div class="team-avatar">
+          <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" />
+        </div>
+        <h4 class="team-name">{{ member.name }}</h4>
+        <p class="team-role">{{ member.role }}</p>
       </div>
       {% endfor %}
     </div>

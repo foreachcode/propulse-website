@@ -1,0 +1,45 @@
+---
+layout: default
+header_scrolled: true
+---
+
+<!-- Article Header -->
+<section class="article-header">
+  <div class="container">
+    <a href="/blog" class="article-back">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+      Retour au blog
+    </a>
+    <h1>{{ page.title }}</h1>
+  </div>
+</section>
+
+<!-- Article Content -->
+<article class="article-content section">
+  <div class="container">
+    <div class="article-container">
+      {{ content }}
+
+      <!-- CTA Box -->
+      {% if page.cta_title %}
+      <div class="article-cta-box">
+        <h3>{{ page.cta_title }}</h3>
+        <p>{{ page.cta_description }}</p>
+        <a href="/#demo" class="btn btn-primary">Demander une demo gratuite</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</article>
+
+<!-- Related Articles -->
+<section class="section" style="background: var(--gray-50);">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Continuez votre lecture</h2>
+    <div style="text-align: center;">
+      <a href="/blog" class="btn btn-primary">Voir tous les articles</a>
+    </div>
+  </div>
+</section>

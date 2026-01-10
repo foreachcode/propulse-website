@@ -1,21 +1,20 @@
-<header class="header" id="header">
+<header class="header{% if page.header_scrolled %} scrolled{% endif %}" id="header">
   <div class="container">
     <nav class="nav">
       <a href="/" class="nav-logo">
-        <img src="{{ '/assets/logos/logo-propulse.svg' | relative_url }}" alt="Propulse" />
+        <img src="/assets/logos/logo-propulse-white.svg" alt="Propulse" loading="eager" />
       </a>
 
       <div class="nav-links">
-        <a href="#features">Fonctionnalités</a>
-        <a href="#team">Équipe</a>
-        <a href="#faq">FAQ</a>
-        <a href="/blog">Blog</a>
-        <a href="#contact">Contact</a>
+        {% for link in site.data.navigation.main %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
       </div>
 
       <div class="nav-cta">
-        <a href="https://app.propulse.business" class="btn btn-secondary">Connexion</a>
-        <a href="#demo" class="btn btn-primary">Démo gratuite</a>
+        {% for cta in site.data.navigation.cta %}
+        <a href="{{ cta.url }}" class="{{ cta.class }}">{{ cta.label }}</a>
+        {% endfor %}
       </div>
 
       <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Menu">
@@ -28,11 +27,10 @@
 </header>
 
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#features">Fonctionnalités</a>
-  <a href="#team">Équipe</a>
-  <a href="#faq">FAQ</a>
-  <a href="/blog">Blog</a>
-  <a href="#contact">Contact</a>
-  <a href="https://app.propulse.business" class="btn btn-secondary">Connexion</a>
-  <a href="#demo" class="btn btn-primary">Démo gratuite</a>
+  {% for link in site.data.navigation.main %}
+  <a href="{{ link.url }}">{{ link.label }}</a>
+  {% endfor %}
+  {% for cta in site.data.navigation.cta %}
+  <a href="{{ cta.url }}" class="{{ cta.class }}">{{ cta.label }}</a>
+  {% endfor %}
 </div>
