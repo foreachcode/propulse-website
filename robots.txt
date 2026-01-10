@@ -1,0 +1,18 @@
+---
+layout: null
+---
+# Robots.txt for Propulse
+# https://www.propulse.business
+
+User-agent: *
+Allow: /
+
+# Disallow admin/system paths
+Disallow: /assets/
+Disallow: /_site/
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: {{ site.url }}/sitemap.xml

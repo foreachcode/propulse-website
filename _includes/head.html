@@ -3,17 +3,17 @@
 <meta name="description" content="{{ page.description | default: site.description }}">
 <title>{{ page.title | default: site.title }}</title>
 
-{% if page.canonical %}
 <!-- SEO -->
-<link rel="canonical" href="{{ page.canonical }}">
+{% assign canonical_url = page.canonical | default: site.url | append: page.url %}
+<link rel="canonical" href="{{ canonical_url }}">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Propulse">
 
 <!-- Open Graph -->
 <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
-<meta property="og:title" content="{{ page.title }}">
-<meta property="og:description" content="{{ page.description }}">
-<meta property="og:url" content="{{ page.canonical }}">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:url" content="{{ canonical_url }}">
 <meta property="og:site_name" content="Propulse">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:image" content="{{ page.og_image | default: 'https://www.propulse.business/assets/images/og-image.png' }}">
@@ -22,10 +22,9 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description }}">
 <meta name="twitter:image" content="{{ page.og_image | default: 'https://www.propulse.business/assets/images/og-image.png' }}">
-{% endif %}
 
 <!-- Preload critical fonts -->
 <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" as="font" type="font/woff2" crossorigin>
@@ -52,4 +51,5 @@
 {% include schema-article.html %}
 {% elsif page.url == '/' or page.url == '/index.html' %}
 {% include schema-organization.html %}
+{% include schema-faq.html %}
 {% endif %}
