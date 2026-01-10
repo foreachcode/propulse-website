@@ -53,6 +53,12 @@ footer_legal:
     - label: "Confidentialite"
       url: "/politique-confidentialite"
 
+# Footer - Contact
+footer_contact:
+  title: "Contact"
+  email: "contact@propulse.business"
+  location: "Rouen, France"
+
 # Reseaux sociaux
 social:
   - platform: "LinkedIn"
