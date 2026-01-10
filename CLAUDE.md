@@ -146,6 +146,13 @@ bundle exec jekyll serve --drafts
 
 Modifier `_data/navigation.yml` - le header et footer se mettent a jour automatiquement.
 
+## Ajouter un nouvel article de blog
+
+1. Creer le fichier `blog/mon-article.html` avec le front matter article
+2. **IMPORTANT**: Ajouter manuellement la carte article dans `blog/index.html`
+   - La liste des articles n'est PAS generee automatiquement
+   - Copier une carte existante et modifier le lien, titre, description et icone
+
 ## Important Notes
 
 1. Le dossier `_site/` est genere automatiquement - ne jamais editer directement
@@ -153,3 +160,4 @@ Modifier `_data/navigation.yml` - le header et footer se mettent a jour automati
 3. Les images doivent etre optimisees avant upload
 4. Convertir `og-image.svg` en PNG 1200x630 pour production
 5. Toujours verifier le SEO apres ajout d'un nouvel article
+6. Ne pas oublier d'ajouter les nouveaux articles dans `blog/index.html`
