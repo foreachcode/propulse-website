@@ -1,0 +1,13 @@
+{
+  "name": "Propulse",
+  "short_name": "Propulse",
+  "description": "Le logiciel de gestion de réseaux d'affaires et clubs business",
+  "icons": [
+    { "src": "/assets/logos/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/logos/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#391952",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
