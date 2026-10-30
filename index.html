@@ -11,7 +11,7 @@ description: Le logiciel de gestion de réseaux d'affaires - Optimisez la gestio
   <div class="hero-float float-3"></div>
 
   <div class="container">
-    <div class="hero-content fade-in">
+    <div class="hero-content">
       <span class="hero-badge">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -141,9 +141,9 @@ description: Le logiciel de gestion de réseaux d'affaires - Optimisez la gestio
       {% for member in site.data.team %}
       <div class="team-member fade-in fade-in-delay-{{ forloop.index }}">
         <div class="team-avatar">
-          <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" />
+          <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" width="150" height="150" loading="lazy" decoding="async" />
         </div>
-        <h4 class="team-name">{{ member.name }}</h4>
+        <h3 class="team-name">{{ member.name }}</h3>
         <p class="team-role">{{ member.role }}</p>
       </div>
       {% endfor %}

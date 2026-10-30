@@ -848,6 +848,14 @@
 .fade-in-delay-4 { transition-delay: 0.4s; }
 .fade-in-delay-5 { transition-delay: 0.5s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 // Page Header (for blog, legal pages, etc.)
 .page-header {
   background: $gradient-hero;
@@ -1364,6 +1372,23 @@
   min-height: 700px;
 }
 
+.calendly-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-6;
+  padding: $spacing-8;
+  text-align: center;
+
+  p {
+    color: $gray-700;
+    max-width: 360px;
+    margin: 0;
+  }
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -1376,7 +1401,7 @@
   padding: $spacing-6;
   box-shadow: $shadow-md;
 
-  h3 {
+  h2 {
     font-size: $text-lg;
     color: $gray-900;
     margin-bottom: $spacing-4;

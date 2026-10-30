@@ -23,6 +23,7 @@ propulse-website/
 │   ├── header.html      # Navigation principale + mobile
 │   ├── footer.html      # Pied de page
 │   ├── schema-article.html  # JSON-LD pour articles
+│   ├── schema-webpage.html  # JSON-LD par defaut (WebPage + fil d'Ariane)
 │   └── icons.html       # SVG icons
 ├── _layouts/            # Templates de pages
 │   ├── default.html     # Layout de base
@@ -56,6 +57,8 @@ propulse-website/
   - `page.og_type` (default: 'website')
   - `page.og_image` (default: og-image.png)
   - `page.schema` (JSON-LD custom)
+  - `page.schema_type` (type du JSON-LD par defaut, ex: ContactPage, CollectionPage; default: WebPage)
+  - `page.breadcrumb` (libelle du fil d'Ariane JSON-LD; default: page.title)
   - `page.date_published`, `page.date_modified` (pour articles)
 
 - **header.html**: Navigation dynamique depuis `site.data.navigation`
@@ -122,15 +125,19 @@ bundle exec jekyll serve --drafts
 
 - Sitemap: `/sitemap.xml`
 - Robots: `/robots.txt`
-- Schema.org JSON-LD automatique pour articles
+- `/llms.txt` : guide pour les assistants IA (genere automatiquement, liste les articles)
+- `/.well-known/security.txt` : contact securite (date `Expires` renouvelee a chaque build)
+- Schema.org JSON-LD sur toutes les pages (articles, accueil, et `schema-webpage.html` par defaut)
+- Hierarchie de titres sans saut (H1 > H2 > H3) : les titres du footer sont des `h2`
 - Open Graph et Twitter Cards (image 1200x630)
-- URLs canoniques
-- Preload fonts critiques
+- URLs canoniques (toujours avec slash final, calculees dans `head.html`)
 - Cache-busting CSS (`main.css?v=1.0`)
 
 ## Performance
 
-- Preload des fonts Inter et Plus Jakarta Sans
+- Google Fonts charge en non-bloquant (`media="print"` + `onload`)
+- Pas de `fade-in` sur les elements au-dessus de la ligne de flottaison (degrade le Speed Index)
+- Widget Calendly (page contact) charge a la premiere interaction pour limiter le TBT
 - `loading="lazy"` sur images non-critiques
 - `loading="eager"` sur logo header
 - CSS versioning pour cache-busting

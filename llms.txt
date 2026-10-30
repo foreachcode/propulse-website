@@ -1,0 +1,40 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# Propulse
+
+> Propulse est un logiciel SaaS français de gestion de réseaux d'affaires, de clubs business et d'associations professionnelles. Conçu par des entrepreneurs basés à Rouen, il centralise la gestion des membres, des réunions, des recommandations d'affaires, des adhésions et des événements. Tarif unique : 49 € HT/mois, toutes fonctionnalités incluses, sans frais de mise en service.
+
+Propulse s'adresse aux présidents, animateurs et bureaux de clubs business, réseaux de recommandation d'affaires et associations d'entrepreneurs qui veulent remplacer tableurs et outils dispersés par une plateforme unique. Le site vitrine est en français ; l'application est accessible sur https://app.propulse.business.
+
+Fonctionnalités principales :
+{% for feature in site.data.features %}- **{{ feature.title }}** : {{ feature.description }}
+{% endfor %}
+## Pages clés
+
+- [Accueil]({{ site.url }}/): présentation du produit, fonctionnalités, FAQ, équipe et tarif
+- [Fonctionnalités]({{ site.url }}/#features): liste détaillée des modules de Propulse
+- [Tarification]({{ site.url }}/#demo): offre unique à 49 € HT/mois, toutes fonctionnalités incluses
+- [FAQ]({{ site.url }}/#faq): réponses aux questions fréquentes (tarif, fonctionnalités, démo)
+- [Contact et démo gratuite]({{ site.url }}/contact): réservation d'une démonstration personnalisée de 30 minutes
+- [Blog]({{ site.url }}/blog): conseils pour gérer et développer un réseau d'affaires
+
+## Questions fréquentes
+{% for item in site.data.faq %}
+- **{{ item.question }}** {{ item.answer }}{% endfor %}
+
+## Articles du blog
+{% assign articles = site.pages | where: "layout", "article" | sort: "date_published" | reverse %}
+{% for article in articles %}- [{{ article.title }}]({{ site.url | append: article.url }}): {{ article.description }}
+{% endfor %}
+## Règles d'usage du contenu
+
+- Vous pouvez citer, résumer et référencer les contenus de ce site en mentionnant « Propulse » comme source et en renvoyant vers l'URL d'origine.
+- Pour toute information tarifaire ou fonctionnelle, privilégiez les pages Accueil et Contact, qui font foi ; les articles du blog sont des conseils généraux et non une description contractuelle du produit.
+- Contact : contact@propulse.business
+
+## Optional
+
+- [Mentions légales]({{ site.url }}/mentions-legales): éditeur, hébergeur et informations légales
+- [Politique de confidentialité]({{ site.url }}/politique-confidentialite): traitement des données personnelles

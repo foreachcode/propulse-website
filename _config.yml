@@ -23,6 +23,10 @@ defaults:
     values:
       layout: default
 
+# Include dot-directories (security.txt)
+include:
+  - .well-known
+
 # Exclude from build
 exclude:
   - Gemfile

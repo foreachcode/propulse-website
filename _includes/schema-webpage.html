@@ -1,0 +1,39 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ page.schema_type | default: 'WebPage' | jsonify }},
+  "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "name": {{ page.title | default: site.title | jsonify }},
+  "description": {{ page.description | default: site.description | jsonify }},
+  "inLanguage": "fr-FR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Propulse",
+    "url": "https://www.propulse.business"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Propulse",
+    "url": "https://www.propulse.business",
+    "logo": "https://www.propulse.business/assets/logos/logo-propulse.svg"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://www.propulse.business/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": {{ page.breadcrumb | default: page.title | default: site.title | jsonify }},
+        "item": {{ canonical_url | jsonify }}
+      }
+    ]
+  }
+}
+</script>
